@@ -1,6 +1,6 @@
 <h1 align="center"> SQL_quering_northwind </h1>
 
-**Índice**
+**Index**
 
 1.- [Project description](#id1)
 
