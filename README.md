@@ -19,5 +19,5 @@
 <p>&nbsp&nbsp&nbsp&nbsp 4.- MySQL Workbench show you northwind database in SCHEMAS section</p>
 
 ## Checking queries<a name="id3"></a>
-<p>Checking queries</p>
+<p>All queries are including in 'northwindQueries.sql' file. if we want execute them, we just have to open this file in our MySQL Workbench</p>
 
