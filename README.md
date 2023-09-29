@@ -10,7 +10,7 @@
 
 
 ## Project description<a name="id1"></a>
-<p>Project description</p>
+<p>The goal of this project is to practice SQL language. In order to achieve it, we are going to use one of the most famous test database called "Northwind". As a SGDB we are going to use MySql and its tool MySql Workbench.</p>
 
 ## Installation DB Northwind<a name="id2"></a>
 <p>Installation DB Northwind</p>
