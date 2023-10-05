@@ -17,4 +17,11 @@ SELECT * FROM customers WHERE City = 'Bruxelles' OR City = 'London';
 SELECT * FROM customers WHERE NOT City = 'London';
 SELECT * FROM products WHERE (Price < 20 OR CategoryID = 6) AND SupplierID = 7;
 SELECT * FROM customers WHERE NOT Country = 'USA' AND NOT Country = 'France';
+SELECT * FROM customers WHERE Country != 'USA';
 SELECT * FROM products WHERE NOT CategoryID = 6 AND NOT SupplierID = 1 AND Price <= 30 ORDER BY RAND() LIMIT 3;
+
+-- queries with 'BETWEEN'
+SELECT * FROM products WHERE Price BETWEEN 20 AND 40;
+SELECT * FROM products WHERE Price BETWEEN 20 AND 40 AND CategoryID = 6;
+SELECT * FROM products WHERE Price BETWEEN 20 AND 40 AND CategoryID = 6 ORDER BY Price ASC;
+SELECT * FROM employees WHERE BirthDate BETWEEN '1960-01-01' AND '1970-01-01';
