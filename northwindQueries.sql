@@ -44,7 +44,7 @@ SELECT * FROM products WHERE SupplierID IN (3, 4, 5, 6);
 SELECT * FROM employees WHERE LastName IN ('Suyama', 'Callahan');
 SELECT * FROM employees WHERE LastName NOT IN ('Suyama', 'Callahan');
 
--- queries with aggregation functions
+-- queries with aggregate functions
 SELECT COUNT(FirstName) AS quantity_of_names FROM employees;
 SELECT SUM(Price) AS sum_of_precios FROM products;
 SELECT AVG(Price) AS average_of_precios FROM products;
