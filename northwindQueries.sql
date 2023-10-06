@@ -25,3 +25,9 @@ SELECT * FROM products WHERE Price BETWEEN 20 AND 40;
 SELECT * FROM products WHERE Price BETWEEN 20 AND 40 AND CategoryID = 6;
 SELECT * FROM products WHERE Price BETWEEN 20 AND 40 AND CategoryID = 6 ORDER BY Price ASC;
 SELECT * FROM employees WHERE BirthDate BETWEEN '1960-01-01' AND '1970-01-01';
+
+-- queries with 'LIKE'
+SELECT * FROM employees WHERE LastName LIKE 'Buchanan';
+SELECT * FROM employees WHERE LastName LIKE '%hanan'; 
+SELECT * FROM employees WHERE LastName LIKE 'Buc%';
+SELECT * FROM employees WHERE LastName LIKE '%uc%';
