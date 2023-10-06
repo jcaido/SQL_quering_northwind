@@ -31,3 +31,10 @@ SELECT * FROM employees WHERE LastName LIKE 'Buchanan';
 SELECT * FROM employees WHERE LastName LIKE '%hanan'; 
 SELECT * FROM employees WHERE LastName LIKE 'Buc%';
 SELECT * FROM employees WHERE LastName LIKE '%uc%';
+SELECT * FROM employees WHERE LastName LIKE 'B______n';
+SELECT * FROM employees WHERE LastName LIKE 'Bucha___';
+SELECT * FROM employees WHERE LastName LIKE '%n__';
+
+-- queries with 'IS NULL' or 'IS NOT NULL'
+SELECT * FROM products WHERE ProductName IS NULL ORDER BY ProductName ASC;
+SELECT * FROM products WHERE ProductName IS NOT NULL ORDER BY ProductName ASC;
