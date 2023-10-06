@@ -37,4 +37,19 @@ SELECT * FROM employees WHERE LastName LIKE '%n__';
 
 -- queries with 'IS NULL' or 'IS NOT NULL'
 SELECT * FROM products WHERE ProductName IS NULL ORDER BY ProductName ASC;
-SELECT * FROM products WHERE ProductName IS NOT NULL ORDER BY ProductName ASC;
+SELECT * FROM products WHERE ProductName IS NOT NULL ORDER BY ProductName ASC; 
+
+-- queries with 'IN'
+SELECT * FROM products WHERE SupplierID IN (3, 4, 5, 6);
+SELECT * FROM employees WHERE LastName IN ('Suyama', 'Callahan');
+SELECT * FROM employees WHERE LastName NOT IN ('Suyama', 'Callahan');
+
+-- queries with aggregation functions
+SELECT COUNT(FirstName) AS quantity_of_names FROM employees;
+SELECT SUM(Price) AS sum_of_precios FROM products;
+SELECT AVG(Price) AS average_of_precios FROM products;
+SELECT ROUND(AVG(Price)) AS average_of_precios FROM products;
+SELECT ROUND(AVG(Price), 2) AS average_of_precios FROM products;
+SELECT MIN(Price) AS minimum_of_precios FROM products;
+SELECT ProductName AS Product_with_minimun_price, MIN(Price) as Price FROM products;
+SELECT ProductName, MAX(Price) as Price FROM products;
