@@ -53,3 +53,7 @@ SELECT ROUND(AVG(Price), 2) AS average_of_precios FROM products;
 SELECT MIN(Price) AS minimum_of_precios FROM products;
 SELECT ProductName AS Product_with_minimun_price, MIN(Price) as Price FROM products;
 SELECT ProductName, MAX(Price) as Price FROM products;
+
+-- queries with 'GROUP BY'
+SELECT SupplierID, ROUND(AVG(Price), 2) AS Promedio FROM products GROUP BY SupplierID ORDER BY Promedio DESC;
+SELECT CategoryID, ROUND(AVG(Price),2) AS Promedio FROM products WHERE NOT CategoryID = 6 GROUP BY CategoryID ORDER BY Promedio DESC;
