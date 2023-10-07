@@ -57,3 +57,13 @@ SELECT ProductName, MAX(Price) as Price FROM products;
 -- queries with 'GROUP BY'
 SELECT SupplierID, ROUND(AVG(Price), 2) AS Promedio FROM products GROUP BY SupplierID ORDER BY Promedio DESC;
 SELECT CategoryID, ROUND(AVG(Price),2) AS Promedio FROM products WHERE NOT CategoryID = 6 GROUP BY CategoryID ORDER BY Promedio DESC;
+
+-- queries with 'GROUP BY' and 'HAVING'
+SELECT SupplierID, ROUND(AVG(Price), 2) AS Promedio FROM products GROUP BY SupplierID HAVING Promedio > 20 ORDER BY Promedio;
+
+SELECT ProductID, SUM(Quantity) AS Total_vendido FROM orderdetails 
+GROUP BY ProductID 
+HAVING Total_vendido < 50 
+ORDER BY Total_vendido DESC;
+
+SELECT ProductID, SUM(Quantity) AS Total_vendido FROM orderdetails GROUP BY ProductID ORDER BY Total_vendido DESC LIMIT 1;
