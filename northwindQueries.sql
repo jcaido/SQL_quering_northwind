@@ -71,11 +71,21 @@ SELECT ProductID, SUM(Quantity) AS Total_vendido FROM orderdetails GROUP BY Prod
 -- Subqueries
 SELECT ProductID, Quantity, (SELECT ProductName FROM products WHERE ProductID = orderdetails.ProductID) AS Nombre FROM orderdetails;
 SELECT ProductID, Quantity, (SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre FROM orderdetails AS od;
+
 SELECT ProductID,
 	SUM(Quantity) AS Total_vendido,
     (SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre,
     (SELECT Price FROM products WHERE ProductID = od.ProductID) AS Price,
     (SUM(Quantity) * (SELECT Price FROM products WHERE ProductID = od.ProductID)) AS Total_recaudado
 FROM orderdetails AS od
+GROUP BY ProductID
+ORDER BY Total_recaudado DESC;
+
+SELECT ProductID,
+	SUM(Quantity) AS Total_vendido,
+    (SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre,
+    (SUM(Quantity) * (SELECT Price FROM products WHERE ProductID = od.ProductID)) AS Total_recaudado
+FROM orderdetails AS od
+WHERE (SELECT Price FROM products WHERE ProductID = od.ProductID) > 40
 GROUP BY ProductID
 ORDER BY Total_recaudado DESC;
