@@ -89,3 +89,25 @@ FROM orderdetails AS od
 WHERE (SELECT Price FROM products WHERE ProductID = od.ProductID) > 40
 GROUP BY ProductID
 ORDER BY Total_recaudado DESC;
+
+SELECT * FROM (
+	SELECT ProductID,
+		SUM(Quantity) AS Total_vendido,
+		(SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre,
+		(SUM(Quantity) * (SELECT Price FROM products WHERE ProductID = od.ProductID)) AS Total_recaudado
+	FROM orderdetails AS od
+	WHERE (SELECT Price FROM products WHERE ProductID = od.ProductID) > 40
+	GROUP BY ProductID
+	ORDER BY Total_recaudado DESC
+) AS Tabla;
+
+SELECT Nombre, Total_recaudado FROM (
+	SELECT ProductID,
+		SUM(Quantity) AS Total_vendido,
+		(SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre,
+		(SUM(Quantity) * (SELECT Price FROM products WHERE ProductID = od.ProductID)) AS Total_recaudado
+	FROM orderdetails AS od
+	WHERE (SELECT Price FROM products WHERE ProductID = od.ProductID) > 40
+	GROUP BY ProductID
+	ORDER BY Total_recaudado DESC
+) AS Tabla;
