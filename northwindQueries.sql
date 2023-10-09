@@ -101,7 +101,7 @@ SELECT * FROM (
 	ORDER BY Total_recaudado DESC
 ) AS Tabla;
 
-SELECT Nombre, Total_recaudado FROM (
+SELECT Nombre, Total_vendido, Total_recaudado FROM (
 	SELECT ProductID,
 		SUM(Quantity) AS Total_vendido,
 		(SELECT ProductName FROM products WHERE ProductID = od.ProductID) AS Nombre,
@@ -110,4 +110,4 @@ SELECT Nombre, Total_recaudado FROM (
 	WHERE (SELECT Price FROM products WHERE ProductID = od.ProductID) > 40
 	GROUP BY ProductID
 	ORDER BY Total_recaudado DESC
-) AS Tabla;
+) AS Tabla WHERE Total_vendido > 100 ORDER BY Total_vendido;
