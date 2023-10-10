@@ -119,3 +119,4 @@ SELECT * FROM employees e CROSS JOIN orders o;
 -- INNER JOIN
 SELECT * FROM employees e, orders o WHERE e.EmployeeID = o.EmployeeID;
 SELECT * FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID;
+SELECT LastName, FirstName, OrderID FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID; 
