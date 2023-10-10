@@ -111,3 +111,11 @@ SELECT Nombre, Total_vendido, Total_recaudado FROM (
 	GROUP BY ProductID
 	ORDER BY Total_recaudado DESC
 ) AS Tabla WHERE Total_vendido > 100 ORDER BY Total_vendido;
+
+-- queries with 'JOIN'
+-- CROSS JOIN 
+SELECT * FROM employees e, orders o;
+SELECT * FROM employees e CROSS JOIN orders o;
+-- INNER JOIN
+SELECT * FROM employees e, orders o WHERE e.EmployeeID = o.EmployeeID;
+SELECT * FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID;
