@@ -123,4 +123,11 @@ SELECT LastName, FirstName, OrderID FROM employees e INNER JOIN orders o ON e.Em
 -- LEFT / RIGHT JOIN
 SELECT LastName, FirstName, OrderID FROM employees e LEFT JOIN orders o ON e.EmployeeID = o.EmployeeID;
 SELECT LastName, FirstName, OrderID FROM employees e RIGHT JOIN orders o ON e.EmployeeID = o.EmployeeID;
-SELECT LastName, FirstName, OrderID FROM orders o LEFT JOIN employees e ON e.EmployeeID = o.EmployeeID;  
+SELECT LastName, FirstName, OrderID FROM orders o LEFT JOIN employees e ON e.EmployeeID = o.EmployeeID;
+-- UNION (FULL JOIN) / UNION ALL
+SELECT LastName, FirstName, OrderID FROM employees e LEFT JOIN orders o ON e.EmployeeID = o.EmployeeID
+UNION
+SELECT LastName, FirstName, OrderID FROM orders o LEFT JOIN employees e ON e.EmployeeID = o.EmployeeID;
+SELECT LastName, FirstName, OrderID FROM employees e LEFT JOIN orders o ON e.EmployeeID = o.EmployeeID
+UNION ALL
+SELECT LastName, FirstName, OrderID FROM orders o LEFT JOIN employees e ON e.EmployeeID = o.EmployeeID;
