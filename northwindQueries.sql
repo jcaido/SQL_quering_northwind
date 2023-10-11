@@ -119,4 +119,8 @@ SELECT * FROM employees e CROSS JOIN orders o;
 -- INNER JOIN
 SELECT * FROM employees e, orders o WHERE e.EmployeeID = o.EmployeeID;
 SELECT * FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID;
-SELECT LastName, FirstName, OrderID FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID; 
+SELECT LastName, FirstName, OrderID FROM employees e INNER JOIN orders o ON e.EmployeeID = o.EmployeeID;
+-- LEFT / RIGHT JOIN
+SELECT LastName, FirstName, OrderID FROM employees e LEFT JOIN orders o ON e.EmployeeID = o.EmployeeID;
+SELECT LastName, FirstName, OrderID FROM employees e RIGHT JOIN orders o ON e.EmployeeID = o.EmployeeID;
+SELECT LastName, FirstName, OrderID FROM orders o LEFT JOIN employees e ON e.EmployeeID = o.EmployeeID;  
