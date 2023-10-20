@@ -19,3 +19,9 @@ SELECT * FROM sales_rep WHERE surname = 'Rive' AND first_name = 'Sol' OR commiss
 SELECT * FROM sales_rep WHERE surname = 'Rive' AND (first_name = 'Sol' OR commission > 10);
 SELECT * FROM sales_rep WHERE surname LIKE 'G%';
 INSERT INTO sales_rep VALUES (4, 'Rive', 'Mongane', 10), (5, 'Smith', 'Mike', 12);
+SELECT * FROM sales_rep ORDER BY surname;
+SELECT * FROM sales_rep ORDER BY surname, first_name;
+SELECT * FROM sales_rep ORDER BY commission DESC;
+SELECT * FROM sales_rep ORDER BY commission DESC, surname ASC, first_name ASC;
+SELECT first_name, surname, commission FROM sales_rep ORDER BY commission DESC LIMIT 1;
+SELECT first_name, surname, commission FROM sales_rep ORDER BY commission DESC LIMIT 2, 1;
