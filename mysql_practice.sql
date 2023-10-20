@@ -17,3 +17,5 @@ SELECT commission FROM sales_rep WHERE surname = 'Gordimer';
 SELECT commission, employee_number FROM sales_rep WHERE surname = 'Gordimer';
 SELECT * FROM sales_rep WHERE surname = 'Rive' AND first_name = 'Sol' OR commission > 10;
 SELECT * FROM sales_rep WHERE surname = 'Rive' AND (first_name = 'Sol' OR commission > 10);
+SELECT * FROM sales_rep WHERE surname LIKE 'G%';
+INSERT INTO sales_rep VALUES (4, 'Rive', 'Mongane', 10), (5, 'Smith', 'Mike', 12);
