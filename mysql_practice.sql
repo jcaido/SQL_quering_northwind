@@ -6,3 +6,5 @@ CREATE TABLE sales_rep (
     first_name VARCHAR(30),
     commission TINYINT
 );
+SHOW TABLES;
+DESCRIBE sales_rep;
