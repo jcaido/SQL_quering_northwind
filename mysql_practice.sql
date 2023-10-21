@@ -31,3 +31,5 @@ SELECT COUNT(surname) FROM sales_rep;
 SELECT COUNT(DISTINCT surname) FROM sales_rep ORDER BY surname;
 SELECT AVG(commission) FROM sales_rep;
 SELECT SUM(commission) FROM sales_rep;
+DELETE FROM sales_rep WHERE employee_number = 3;
+UPDATE sales_rep SET commission = 12 WHERE employee_number = 1;
