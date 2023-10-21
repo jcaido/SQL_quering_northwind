@@ -25,3 +25,5 @@ SELECT * FROM sales_rep ORDER BY commission DESC;
 SELECT * FROM sales_rep ORDER BY commission DESC, surname ASC, first_name ASC;
 SELECT first_name, surname, commission FROM sales_rep ORDER BY commission DESC LIMIT 1;
 SELECT first_name, surname, commission FROM sales_rep ORDER BY commission DESC LIMIT 2, 1;
+SELECT MAX(commission) FROM sales_rep;
+SELECT DISTINCT surname FROM sales_rep ORDER BY surname;
