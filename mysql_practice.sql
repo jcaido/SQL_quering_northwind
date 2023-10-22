@@ -35,3 +35,5 @@ DELETE FROM sales_rep WHERE employee_number = 3;
 UPDATE sales_rep SET commission = 12 WHERE employee_number = 1;
 CREATE TABLE commission (id INT);
 DROP TABLE commission;
+CREATE DATABASE shortlived;
+DROP DATABASE shortlived;
