@@ -37,3 +37,5 @@ CREATE TABLE commission (id INT);
 DROP TABLE commission;
 CREATE DATABASE shortlived;
 DROP DATABASE shortlived;
+ALTER TABLE sales_rep ADD date_joined DATE;
+ALTER TABLE sales_rep ADD year_born YEAR;
