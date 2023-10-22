@@ -39,3 +39,8 @@ CREATE DATABASE shortlived;
 DROP DATABASE shortlived;
 ALTER TABLE sales_rep ADD date_joined DATE;
 ALTER TABLE sales_rep ADD year_born YEAR;
+ALTER TABLE sales_rep CHANGE year_born birthday DATE;
+ALTER TABLE sales_rep ADD enhancement_value INT;
+ALTER TABLE sales_rep RENAME cash_flow_especialist;
+ALTER TABLE cash_flow_especialist RENAME sales_rep;
+ALTER TABLE sales_rep DROP enhancement_value;
