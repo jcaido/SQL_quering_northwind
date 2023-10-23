@@ -44,3 +44,7 @@ ALTER TABLE sales_rep ADD enhancement_value INT;
 ALTER TABLE sales_rep RENAME cash_flow_especialist;
 ALTER TABLE cash_flow_especialist RENAME sales_rep;
 ALTER TABLE sales_rep DROP enhancement_value;
+UPDATE sales_rep SET date_joined = '2000-02-15', birthday = '1976-03-18' WHERE employee_number = 1;
+UPDATE sales_rep SET date_joined = '1998-07-0', birthday = '1958-11-30' WHERE employee_number = 2;
+UPDATE sales_rep SET date_joined = '2001-05-14', birthday = '1971-06-18' WHERE employee_number = 4;
+UPDATE sales_rep SET date_joined = '2002-11-23', birthday = '1982-01-04' WHERE employee_number = 5;
