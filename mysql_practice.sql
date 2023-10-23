@@ -48,3 +48,7 @@ UPDATE sales_rep SET date_joined = '2000-02-15', birthday = '1976-03-18' WHERE e
 UPDATE sales_rep SET date_joined = '1998-07-0', birthday = '1958-11-30' WHERE employee_number = 2;
 UPDATE sales_rep SET date_joined = '2001-05-14', birthday = '1971-06-18' WHERE employee_number = 4;
 UPDATE sales_rep SET date_joined = '2002-11-23', birthday = '1982-01-04' WHERE employee_number = 5;
+SELECT DATE_FORMAT(date_joined, '%m/%d/%Y') FROM sales_rep WHERE employee_number = 1;
+SELECT DATE_FORMAT(date_joined, '%W %M %e %Y') FROM sales_rep WHERE employee_number = 1;
+SELECT DATE_FORMAT(date_joined, '%W %M %e %Y') FROM sales_rep WHERE employee_number = 1;
+SELECT DATE_FORMAT(date_joined, '%a %D %b, %Y') FROM sales_rep WHERE employee_number = 1;
