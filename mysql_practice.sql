@@ -51,4 +51,7 @@ UPDATE sales_rep SET date_joined = '2002-11-23', birthday = '1982-01-04' WHERE e
 SELECT DATE_FORMAT(date_joined, '%m/%d/%Y') FROM sales_rep WHERE employee_number = 1;
 SELECT DATE_FORMAT(date_joined, '%W %M %e %Y') FROM sales_rep WHERE employee_number = 1;
 SELECT DATE_FORMAT(date_joined, '%W %M %e %Y') FROM sales_rep WHERE employee_number = 1;
-SELECT DATE_FORMAT(date_joined, '%a %D %b, %Y') FROM sales_rep WHERE employee_number = 1;
+SELECT NOW();
+SELECT CURRENT_DATE();
+SELECT YEAR(birthday) FROM sales_rep;
+SELECT DAYOFMONTH(birthday), MONTH(birthday), YEAR(birthday) FROM sales_rep;
