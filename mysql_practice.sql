@@ -55,3 +55,5 @@ SELECT NOW();
 SELECT CURRENT_DATE();
 SELECT YEAR(birthday) FROM sales_rep;
 SELECT DAYOFMONTH(birthday), MONTH(birthday), YEAR(birthday) FROM sales_rep;
+SELECT surname, first_name, MONTH(birthday) as month, DAYOFMONTH(birthday) AS day FROM sales_rep ORDER BY month;
+SELECT CONCAT(first_name, ' ', surname) AS name, MONTH(birthday) as month, DAYOFMONTH(birthday) AS day FROM sales_rep ORDER BY month;
