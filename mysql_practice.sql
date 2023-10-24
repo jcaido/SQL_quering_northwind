@@ -58,3 +58,26 @@ SELECT DAYOFMONTH(birthday), MONTH(birthday), YEAR(birthday) FROM sales_rep;
 SELECT surname, first_name, MONTH(birthday) as month, DAYOFMONTH(birthday) AS day FROM sales_rep ORDER BY month;
 SELECT CONCAT(first_name, ' ', surname) AS name, MONTH(birthday) as month, DAYOFMONTH(birthday) AS day FROM sales_rep ORDER BY month;
 SELECT DAYOFYEAR(date_joined) FROM sales_rep WHERE employee_number = 1;
+CREATE TABLE costumer (
+	id INT,
+    first_name VARCHAR(30),
+    surname VARCHAR(40)
+);
+CREATE TABLE sales (
+	code INT,
+    sales_rep INT,
+    customer INT,
+    value INT
+);
+INSERT INTO costumer (id, first_name, surname) VALUES
+	(1, 'Yvonne', 'Clegg'),
+    (2, 'Johnny', 'Chaka-Chaka'),
+    (3, 'Winston', 'Powers'),
+    (4, 'Patricia', 'Mankunku');
+INSERT INTO sales (code, sales_rep, customer, value) VALUES
+	(1, 1, 1, 2000),
+    (2, 4, 3, 250),
+    (3, 2, 3, 500),
+    (4, 1, 4, 450),
+    (5, 3, 1, 3800),
+    (6, 1, 2, 500);
