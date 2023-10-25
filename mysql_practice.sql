@@ -81,3 +81,4 @@ INSERT INTO sales (code, sales_rep, customer, value) VALUES
     (4, 1, 4, 450),
     (5, 3, 1, 3800),
     (6, 1, 2, 500);
+SELECT sales_rep, customer, value, first_name, surname FROM sales, sales_rep WHERE code = 1 AND sales_rep.employee_number = sales.sales_rep;
