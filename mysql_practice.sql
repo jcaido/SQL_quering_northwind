@@ -87,3 +87,7 @@ SELECT code, customer, value FROM sales, sales_rep
 WHERE first_name = 'Sol' AND surname = 'Rive' AND sales.sales_rep = sales_rep.employee_number;
 SELECT employee_number, surname, first_name, YEAR(CURRENT_DATE) - YEAR(birthday) - (RIGHT(CURRENT_DATE, 5) < RIGHT(birthday, 5)) AS edad 
 FROM sales_rep;
+SELECT sales_rep, SUM(value) AS total_ventas FROM sales GROUP BY sales_rep ORDER BY total_ventas DESC;
+SELECT first_name, surname, sales_rep, COUNT(*) AS count FROM sales, sales_rep
+WHERE sales_rep.employee_number = sales.sales_rep
+GROUP BY sales_rep ORDER BY count LIMIT 1;
