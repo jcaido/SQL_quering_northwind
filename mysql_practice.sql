@@ -85,3 +85,5 @@ SELECT sales_rep, customer, value, first_name, surname FROM sales, sales_rep
 WHERE code = 1 AND sales_rep.employee_number = sales.sales_rep;
 SELECT code, customer, value FROM sales, sales_rep
 WHERE first_name = 'Sol' AND surname = 'Rive' AND sales.sales_rep = sales_rep.employee_number;
+SELECT employee_number, surname, first_name, YEAR(CURRENT_DATE) - YEAR(birthday) - (RIGHT(CURRENT_DATE, 5) < RIGHT(birthday, 5)) AS edad 
+FROM sales_rep;
