@@ -91,3 +91,6 @@ SELECT sales_rep, SUM(value) AS total_ventas FROM sales GROUP BY sales_rep ORDER
 SELECT first_name, surname, sales_rep, COUNT(*) AS count FROM sales, sales_rep
 WHERE sales_rep.employee_number = sales.sales_rep
 GROUP BY sales_rep ORDER BY count LIMIT 1;
+CREATE TABLE test1 (id TINYINT ZEROFILL);
+INSERT INTO test1 VALUES (3);
+SELECT * FROM test1;
