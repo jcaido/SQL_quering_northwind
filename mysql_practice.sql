@@ -94,3 +94,7 @@ GROUP BY sales_rep ORDER BY count LIMIT 1;
 CREATE TABLE test1 (id TINYINT ZEROFILL);
 INSERT INTO test1 VALUES (3);
 SELECT * FROM test1;
+CREATE TABLE test2 (bool ENUM('true', 'false'));
+INSERT INTO test2 VALUES ('true');
+INSERT INTO test2 VALUES ('troo');
+SELECT * FROM test2;
