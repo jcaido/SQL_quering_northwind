@@ -100,4 +100,5 @@ INSERT INTO test2 VALUES ('troo');
 CREATE TABLE test3 (fruit SET('apple', 'mango', 'litchi', 'banana'));
 INSERT INTO test3 VALUES ('banana');
 INSERT INTO test3 VALUES ('litchi');
+INSERT INTO test3 VALUES ('apple,mango');
 SELECT * FROM test3;
