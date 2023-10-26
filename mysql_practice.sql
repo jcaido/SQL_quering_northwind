@@ -97,4 +97,7 @@ SELECT * FROM test1;
 CREATE TABLE test2 (bool ENUM('true', 'false'));
 INSERT INTO test2 VALUES ('true');
 INSERT INTO test2 VALUES ('troo');
-SELECT * FROM test2;
+CREATE TABLE test3 (fruit SET('apple', 'mango', 'litchi', 'banana'));
+INSERT INTO test3 VALUES ('banana');
+INSERT INTO test3 VALUES ('litchi');
+SELECT * FROM test3;
