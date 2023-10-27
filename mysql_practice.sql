@@ -102,3 +102,6 @@ INSERT INTO test3 VALUES ('banana');
 INSERT INTO test3 VALUES ('litchi');
 INSERT INTO test3 VALUES ('apple,mango');
 SELECT * FROM test3;
+CREATE TABLE tt (ts DATETIME);
+INSERT INTO tt VALUES ('2023-10-27 10:34');
+SELECT * FROM tt;
