@@ -109,3 +109,12 @@ SELECT * FROM tt;
 SELECT sales_rep, customer, value, first_name, surname  FROM sales, sales_rep WHERE code = 1 AND sales.sales_rep = sales_rep.employee_number;
 SELECT first_name, surname, value FROM costumer, sales WHERE id = customer;
 SELECT first_name, surname, value FROM costumer INNER JOIN sales ON id = customer;
+INSERT INTO sales (code, sales_rep, customer, value) VALUES (7, 2, NULL, 670);
+SELECT sales_rep.first_name, sales_rep.surname, value, costumer.first_name, costumer.surname
+FROM sales, costumer, sales_rep
+WHERE sales_rep.employee_number = sales.sales_rep
+AND costumer.id = sales.customer;
+SELECT sales_rep.first_name, sales_rep.surname, value, costumer.first_name, costumer.surname
+FROM sales
+LEFT JOIN sales_rep ON sales_rep.employee_number = sales.sales_rep
+LEFT JOIN costumer ON costumer.id = sales.customer;
