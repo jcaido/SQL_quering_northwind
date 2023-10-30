@@ -105,3 +105,7 @@ SELECT * FROM test3;
 CREATE TABLE tt (ts DATETIME);
 INSERT INTO tt VALUES ('2023-10-27 10:34');
 SELECT * FROM tt;
+
+SELECT sales_rep, customer, value, first_name, surname  FROM sales, sales_rep WHERE code = 1 AND sales.sales_rep = sales_rep.employee_number;
+SELECT first_name, surname, value FROM costumer, sales WHERE id = customer;
+SELECT first_name, surname, value FROM costumer INNER JOIN sales ON id = customer;
