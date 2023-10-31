@@ -122,3 +122,4 @@ ALTER TABLE sales CHANGE customer id INT;
 ALTER TABLE cutomer RENAME customer;
 SELECT first_name, surname, value FROM customer NATURAL JOIN sales;
 SELECT first_name, surname, value FROM customer INNER JOIN sales ON customer.id = sales.id;
+SELECT first_name, surname, value FROM customer INNER JOIN sales USING (id);
