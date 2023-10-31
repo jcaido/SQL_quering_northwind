@@ -118,3 +118,6 @@ SELECT sales_rep.first_name, sales_rep.surname, value, costumer.first_name, cost
 FROM sales
 LEFT JOIN sales_rep ON sales_rep.employee_number = sales.sales_rep
 LEFT JOIN costumer ON costumer.id = sales.customer;
+ALTER TABLE sales CHANGE customer id INT;
+ALTER TABLE cutomer RENAME customer;
+SELECT first_name, surname, value FROM customer NATURAL JOIN sales;
