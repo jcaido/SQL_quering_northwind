@@ -123,3 +123,18 @@ ALTER TABLE cutomer RENAME customer;
 SELECT first_name, surname, value FROM customer NATURAL JOIN sales;
 SELECT first_name, surname, value FROM customer INNER JOIN sales ON customer.id = sales.id;
 SELECT first_name, surname, value FROM customer INNER JOIN sales USING (id);
+CREATE TABLE old_customer (
+	id INT,
+    first_name VARCHAR(30),
+    surname VARCHAR(40)
+);
+INSERT INTO old_customer VALUES
+	(5432, 'Thulani', 'Salie'),
+    (2342, 'Shahiem', 'Papo');
+SELECT id, first_name, surname FROM customer
+UNION
+SELECT id, first_name, surname FROM old_customer
+ORDER BY surname, first_name;
+SELECT id, first_name, surname FROM customer
+UNION
+(SELECT id, first_name, surname FROM old_customer ORDER BY surname, first_name)
