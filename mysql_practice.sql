@@ -137,4 +137,6 @@ SELECT id, first_name, surname FROM old_customer
 ORDER BY surname, first_name;
 SELECT id, first_name, surname FROM customer
 UNION
-(SELECT id, first_name, surname FROM old_customer ORDER BY surname, first_name)
+(SELECT id, first_name, surname FROM old_customer ORDER BY surname, first_name);
+SELECT first_name, surname FROM sales_rep WHERE employee_number IN (SELECT sales_rep FROM sales WHERE value > 1000);
+SELECT first_name, surname FROM sales_rep INNER JOIN sales ON sales_rep.employee_number = sales.sales_rep WHERE value > 1000;
