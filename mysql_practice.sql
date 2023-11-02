@@ -140,3 +140,11 @@ UNION
 (SELECT id, first_name, surname FROM old_customer ORDER BY surname, first_name);
 SELECT first_name, surname FROM sales_rep WHERE employee_number IN (SELECT sales_rep FROM sales WHERE value > 1000);
 SELECT first_name, surname FROM sales_rep INNER JOIN sales ON sales_rep.employee_number = sales.sales_rep WHERE value > 1000;
+
+CREATE TABLE customer_sales_values (
+	first_name VARCHAR(30),
+    surname VARCHAR(40),
+    value INT);
+INSERT INTO customer_sales_values (first_name, surname, value)
+SELECT first_name, surname, SUM(value) FROM customer INNER JOIN sales ON customer.id = sales.id
+GROUP BY first_name, surname;
