@@ -148,3 +148,5 @@ CREATE TABLE customer_sales_values (
 INSERT INTO customer_sales_values (first_name, surname, value)
 SELECT first_name, surname, SUM(value) FROM customer INNER JOIN sales ON customer.id = sales.id
 GROUP BY first_name, surname;
+DELETE FROM customer_sales_values;
+TRUNCATE customer_sales_values;
