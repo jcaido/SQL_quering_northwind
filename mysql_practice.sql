@@ -150,3 +150,6 @@ SELECT first_name, surname, SUM(value) FROM customer INNER JOIN sales ON custome
 GROUP BY first_name, surname;
 DELETE FROM customer_sales_values;
 TRUNCATE customer_sales_values;
+
+SELECT @avg := AVG(commission) FROM sales_rep;
+SELECT surname, first_name, commission FROM sales_rep WHERE commission < @avg;
