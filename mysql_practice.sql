@@ -153,3 +153,7 @@ TRUNCATE customer_sales_values;
 
 SELECT @avg := AVG(commission) FROM sales_rep;
 SELECT surname, first_name, commission FROM sales_rep WHERE commission < @avg;
+SET @result = 22/7*33.23;
+SELECT @result;
+SET @d = 2000;
+SELECT @d, value FROM sales WHERE value > @d;
