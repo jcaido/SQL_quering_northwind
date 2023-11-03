@@ -170,3 +170,9 @@ BEGIN;
 INSERT INTO innotest (f1) VALUES (2);
 SELECT f1 FROM innotest;
 ROLLBACK;
+
+BEGIN;
+INSERT INTO innotest (f1) VALUES (2);
+COMMIT;
+SELECT f1 FROM innotest;
+
