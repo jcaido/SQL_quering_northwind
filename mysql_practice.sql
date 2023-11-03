@@ -157,3 +157,11 @@ SET @result = 22/7*33.23;
 SELECT @result;
 SET @d = 2000;
 SELECT @d, value FROM sales WHERE value > @d;
+
+CREATE TABLE innotest (
+	f1 INT,
+    F2 CHAR(10),
+    INDEX (f1)
+) ENGINE = InnoDB;
+INSERT INTO innotest (f1) VALUES (1);
+SELECT f1 FROM innotest;
