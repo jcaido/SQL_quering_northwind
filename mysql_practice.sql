@@ -165,3 +165,8 @@ CREATE TABLE innotest (
 ) ENGINE = InnoDB;
 INSERT INTO innotest (f1) VALUES (1);
 SELECT f1 FROM innotest;
+
+BEGIN;
+INSERT INTO innotest (f1) VALUES (2);
+SELECT f1 FROM innotest;
+ROLLBACK;
