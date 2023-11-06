@@ -176,3 +176,13 @@ INSERT INTO innotest (f1) VALUES (2);
 COMMIT;
 SELECT f1 FROM innotest;
 
+INSERT INTO customer (id, first_name, surname) VALUES
+	(5, 'Francois', 'Papo'),
+    (7, 'Winnie', 'Dlamini'),
+    (6, 'Neil', 'Beneke');
+SELECT * FROM customer;
+ALTER TABLE customer MODIFY id INT NOT NULL, ADD PRIMARY KEY (id);
+DESCRIBE customer;
+SELECT * FROM sales;
+ALTER TABLE sales MODIFY code INT NOT NULL, ADD PRIMARY KEY (code);
+DESCRIBE sales;
