@@ -185,6 +185,18 @@ ALTER TABLE customer MODIFY id INT NOT NULL, ADD PRIMARY KEY (id);
 DESCRIBE customer;
 SELECT * FROM sales;
 ALTER TABLE sales MODIFY code INT NOT NULL, ADD PRIMARY KEY (code);
+ALTER TABLE sales ADD INDEX(value);
 DESCRIBE sales;
 SHOW COLUMNS FROM sales;
-ALTER TABLE sales ADD INDEX(value);
+
+CREATE TABLE ft2 (f1 VARCHAR(255), FULLTEXT(f1));
+INSERT INTO ft2 VALUES
+	('Waiting for the barbarians'),
+    ('The master of Petersburg'),
+    ('Writing and Being'),
+    ('Heart of the beast'),
+    ('Heart of the Beest'),
+    ('The Beginning and the End'),
+    ('Master Master'),
+    ('A Barbarian at my door');
+SELECT * FROM ft2 WHERE MATCH(f1) AGAINST ('Master');
