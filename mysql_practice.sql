@@ -203,3 +203,5 @@ SELECT * FROM ft2 WHERE MATCH(f1) AGAINST ('Master');
 
 ALTER TABLE customer MODIFY id INT AUTO_INCREMENT;
 SHOW COLUMNS FROM customer;
+INSERT INTO customer (first_name, surname) VALUES ('Breyton', 'Tshbalaba');
+SELECT * FROM customer;
