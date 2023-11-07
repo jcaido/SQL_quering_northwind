@@ -205,3 +205,5 @@ ALTER TABLE customer MODIFY id INT AUTO_INCREMENT;
 SHOW COLUMNS FROM customer;
 INSERT INTO customer (first_name, surname) VALUES ('Breyton', 'Tshbalaba');
 SELECT * FROM customer;
+DELETE FROM customer WHERE id = 8;
+INSERT INTO customer (first_name, surname) VALUES ('Breyton', 'Tshbalaba');
